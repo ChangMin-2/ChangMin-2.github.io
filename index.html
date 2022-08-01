@@ -4,8 +4,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- iconscout unicons -->
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <!-- google icons -->
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  <!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <!-- Jquery scrollTo-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.3/jquery.scrollTo.min.js" integrity="sha512-PsJ1f4lw0Jrga4wbDOvdWs9DFl88C1vlcH2VQYqgljHBmzmqtGivUkzRHWx2ZxFlnysKUcROqLeuOpYh9q4YNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- gsap cdn -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <!-- gsap scrollTrigger -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <!-- css -->
   <link rel="stylesheet" href="./css/main.css">
   <!-- js -->
@@ -18,38 +29,38 @@
       <div class="nav__container">
         <ul>
           <li>
-            <a href="#!">
-              <i class="uil uil-home icon"></i>
+            <a href="#home">
+              <span class="material-icons-outlined icon">home</span>
               <p>Home</p>
             </a>
           </li>
           <li>
-            <a href="#!">
-              <i class="uil uil-user icon"></i>
+            <a href="#about">
+              <span class="material-icons-outlined icon">person</span>
               <p>About Me</p>
             </a>
           </li>
           <li>
-            <a href="#!">
-              <i class="uil uil-desktop icon"></i>
+            <a href="#skills">
+              <span class="material-icons-outlined icon">laptop_chromebook</span>
               <p>Skills</p>
             </a>
           </li>
           <li>
-            <a href="#!">
-              <i class="uil uil-award icon"></i>
+            <a href="#qualification">
+              <span class="material-icons-outlined icon">military_tech</span>
               <p>Qualification</p>
             </a>
           </li>
           <li>
-            <a href="#!">
-              <i class="uil uil-presentation-check icon"></i>
+            <a href="#projects">
+              <span class="material-icons-outlined icon">web_asset</span>
               <p>Projects</p>
             </a>
           </li>
           <li>
-            <a href="#!">
-              <i class="uil uil-message icon"></i>
+            <a href="#contact">
+              <span class="material-icons-outlined icon">add_ic_call</span>
               <p>Contact</p>
             </a>
           </li>
@@ -68,8 +79,8 @@
           <li><a href="#!">Contact</a></li>
         </ul>
         <div class="mobile-menu__btn">
-          <i class="uil uil-apps menu_open"></i>
-          <i class="uil uil-multiply menu_close"></i>
+          <span class="material-icons-outlined menu_open">grid_view</span>
+          <span class="material-icons-outlined menu_close">close</span>
         </div>
       </div>
         
@@ -86,11 +97,11 @@
         <p>junior Frontend developer</p>
         <p>안녕하세염 안녕하세염 안녕하세염</p>
       </div>
-      <button class="contact__btn">Contact Me <i class="uil uil-message"></i></button>
+      <a class="contact__a" href="#contact"><button class="contact__btn">Contact Me <img class="img-icon" src="./images/icons/message.svg" alt="icon"></button></a>
     </div>
   </section>
 
-  <section class="about">
+  <section class="about" id="about">
     <div class="inner">
       <div class="sec__title">
         <p class="title">About Me</p>
@@ -104,27 +115,27 @@
       </div>
       <div class="my__info">
         <div>
-          <div><i class="uil uil-grin icon"></i></div>
+          <div><span class="material-icons-outlined icon">sentiment_satisfied</span></div>
           <div><p>이름</p><p>이창민</p></div>
         </div>
         <div>
-          <div><i class="uil uil-calendar-alt icon"></i></div>
+          <div><span class="material-icons-outlined icon">calendar_month</span></div>
           <div><p>생년월일</p><p>96.03.02 (27)</p></div>
         </div>
         <div>
-          <div><i class="uil uil-location-point icon"></i></div>
+          <div><span class="material-icons-outlined icon">location_on</span></div>
           <div><p>주소</p><p>부산광역시 해운대구</p></div>
         </div>
         <div>
-          <div><i class="uil uil-graduation-cap icon"></i></div>
-          <div><p>학력</p><p>동명대학교 융합미디어공학 졸업</p></div>
+          <div><span class="material-icons-outlined icon">school</span></div>
+          <div><p>학력</p><p>동명대학교<br>융합미디어공학 졸업</p></div>
         </div>
         
       </div>
     </div>
   </section>
 
-  <section class="skills">
+  <section class="skills" id="skills">
     <div class="inner">
       <div class="sec__title">
         <p class="title">Skills</p>
@@ -132,28 +143,305 @@
       </div>
       <div class="left__skills">
         <div>
-          <i class="uil uil-brackets-curly icon"></i>
-          <p>Frontend developer</p>
+          <div class="skill_name">
+            <span class="material-icons-outlined icon">code</span>
+            <p>Frontend developer</p>
+          </div>
+          <div class="skills_wrap">
+            <div class="bar html">
+              <h3>HTML5</h3>
+              <div class="thumb"><span></span> <abbr>98%</abbr></div>
+            </div>
+            <div class="bar css">
+              <h3>CSS3</h3>
+              <div class="thumb"><span></span><abbr>98%</abbr></div>
+            </div>
+            <div class="bar js">
+              <h3>Javascript</h3>
+              <div class="thumb"><span></span> <abbr>85%</abbr></div>
+            </div>
+            <div class="bar jq">
+              <h3>jQuery </h3>
+              <div class="thumb"><span></span><abbr>85%</abbr></div>
+            </div>
+            <div class="bar react">
+              <h3>React.js </h3>
+              <div class="thumb"><span></span><abbr>80%</abbr></div>
+            </div>
+          </div>
         </div>
-
       </div>
       <div class="right__skills">
         <div>
           <div>
-            <i class="uil uil-code-branch icon"></i>
-            <p>Version control</p>
+            <div class="skill_name">
+              <span class="material-icons-outlined icon">mediation</span>
+              <p>Version control</p>
+            </div>
+            <div class="skills_wrap">
+              <div class="bar git">
+                <h3>Git </h3>
+                <div class="thumb"><span></span><abbr>70%</abbr></div>
+              </div>
+              <div class="bar github">
+                <h3>Github </h3>
+                <div class="thumb"><span></span><abbr>70%</abbr></div>
+              </div>
+            </div>
           </div>
         </div>
-        <div>
-          <div>
-            <i class="uil uil-browser icon"></i>
-            <p>Etc</p>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
+
+  <section class="qualification" id="qualification">
+    <div class="inner">
+      <div class="sec__title">
+        <p class="title">Qualification</p>
+        <p class="sub__title">My personal journey</p>
+      </div>
+
+      <input type="radio" id="qualification_tab1" name="qualification_tab" checked>
+      <input type="radio" id="qualification_tab2" name="qualification_tab">
+
+      <div class="qualification__tabs">
+        <label for="qualification_tab1">
+          <div class="qualification__btn qb1">
+            <span class="material-icons-outlined">school</span>
+            Education
+          </div>
+        </label>
+        <label for="qualification_tab2">
+          <div class="qualification__btn qb2">
+            <span class="material-icons-outlined">military_tech</span>
+            certificate
+          </div>
+        </label>
+      </div>
+
+      <div class="qualification__sections">
+        <div class="qualification__content qc1">
+          <div class="qualification__data data1">
+            <div class="qualification__text">
+              <h3 class="qualification__title">프론트엔드 개발자 양성과정</h3>
+              <span class="qualification__subtitle">그린컴퓨터아카데미</span>
+              <div class="qualification__calender">
+                <span class="material-icons-outlined">calendar_month</span>
+                2022.02 ~ 2022.08
+              </div>
+            </div>
+
+            <div>
+              <span class="qualification__rounder"></span>
+              <span class="qualification__line"></span>
+            </div>
+            
+            <div>
+            </div>
+          </div>
+
+          
+          <div class="qualification__data data2">
+            
+            <div>
+            </div>
+
+            <div>
+              <span class="qualification__rounder"></span>
+              <span class="qualification__line"></span>
+            </div>
+            <div class="qualification__text">
+              <h3 class="qualification__title">프론트엔드 초격자 패키지</h3>
+              <span class="qualification__subtitle">패스트캠퍼스(온라인)</span>
+              <div class="qualification__calender">
+                <span class="material-icons-outlined">calendar_month</span>
+                2021.10 ~ 2022.02
+              </div>
+            </div>
+          </div>
+
+
+          <div class="qualification__data data3">
+
+            <div class="qualification__text">
+              <h3 class="qualification__title">동명대학교</h3>
+              <span class="qualification__subtitle">융합미디어공학</span>
+              <div class="qualification__calender">
+                <span class="material-icons-outlined">calendar_month</span>
+                2022.02 ~ 2022.08
+              </div>
+            </div>
+
+            <div>
+              <span class="qualification__rounder"></span>
+              <span class="qualification__line"></span>
+            </div>
+
+            <div>
+            </div>
+          </div>
+
+          <div class="qualification__data data4">
+
+            <div>
+            </div>
+
+            <div>
+              <span class="qualification__rounder"></span>
+            </div>
+
+            <div class="qualification__text">
+              <h3 class="qualification__title">부산 부흥고등학교</h3>
+              <span class="qualification__subtitle">인문계 이과</span>
+              <div class="qualification__calender">
+                <span class="material-icons-outlined">calendar_month</span>
+                2022.02 ~ 2022.08
+              </div>
+            </div>     
+          </div>  <!--education-->
+        </div>
+
+        <div class="qualification__content qc2">
+          <div class="qualification__data data1">
+            <div class="qualification__text">
+              <h3 class="qualification__title">정보처리기사(필기)</h3>
+              <span class="qualification__subtitle">한국산업인력공단</span>
+              <div class="qualification__calender">
+                <span class="material-icons-outlined">calendar_month</span>
+                2022.02 ~ 2022.08
+              </div>
+            </div>
+
+            <div>
+              <span class="qualification__rounder"></span>
+              <span class="qualification__line"></span>
+            </div>
+            
+            <div>
+            </div>
+          </div>
+
+          
+          <div class="qualification__data data2">
+            
+            <div>
+            </div>
+
+            <div>
+              <span class="qualification__rounder"></span>
+              <span class="qualification__line"></span>
+            </div>
+            <div class="qualification__text">
+              <h3 class="qualification__title">컴퓨터그래픽스운용기능사</h3>
+              <span class="qualification__subtitle">한국산업인력공단</span>
+              <div class="qualification__calender">
+                <span class="material-icons-outlined">calendar_month</span>
+                2021.10 ~ 2022.02
+              </div>
+            </div>
+          </div>
+
+
+          <div class="qualification__data data3">
+
+            <div class="qualification__text">
+              <h3 class="qualification__title">MOS master</h3>
+              <span class="qualification__subtitle">Microsoft</span>
+              <div class="qualification__calender">
+                <span class="material-icons-outlined">calendar_month</span>
+                2022.02 ~ 2022.08
+              </div>
+            </div>
+
+            <div>
+              <span class="qualification__rounder"></span>
+            </div>
+
+            <div>
+            </div>
+          </div>
+  
+        </div> <!--certificate-->
+
+
+
+
+
+
+        </div>
+      </div>
+      
+
+      
+    </div> <!--inner-->
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="inner">
+      <div class="sec__title">
+        <p class="title">Projects</p>
+        <p class="sub__title">Most recent work</p>
+      </div>
+
+      <div class="projects__container">
+        <div class="swiper projects__swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="project__img">img</div>
+              <div class="project__text">
+                <p class="project__title">DUFT & DOFT</p>
+                <div class="project__info">
+                  <p>1인 리뉴얼 프로젝트</p>
+                  <p>반응형 사이트</p>
+                  <div>
+                    <span>html</span>
+                    <span>css</span>
+                    <span>js</span>
+                    <span>jquery</span>
+                  </div>
+                </div>
+                <button class="demo__btn">
+                  자세히보기
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 4</div>
+          </div>
+          <div class="swiper-next">
+            <span class="material-icons-outlined">
+              arrow_forward_ios
+            </span>
+          </div>
+          <div class="swiper-prev">
+            <span class="material-icons-outlined">
+              arrow_back_ios_new
+            </span>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="inner">
+      <div class="sec__title">
+        <p class="title">Contact Me</p>
+        <p class="sub__title">Get in touch</p>
+      </div>
+
+      <div class="contact__container">
+        <div></div>
+      </div>
+    </div>
+  </section>
+
+
+
   
 </body>
 </html>

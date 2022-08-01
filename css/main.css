@@ -27,13 +27,34 @@ img {display: block;}
   border: none;
   border-radius: var(--global-radius);
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
+.demo__btn {
+  width: 70px;
+  height: 35px;
+  font-size: 0.7em;
+  font-weight: 500;
+  display: block;
+  background-color: var(--point-color);
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: var(--global-radius);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* icon */
-i {
-  font-size: 20px;
-}
 .icon {
   color: var(--point-color);
+}
+.img-icon {
+  width: 20px;
 }
 /* section common */
 .sec__title {text-align: center;}
@@ -51,6 +72,7 @@ i {
   background-color: #fff;
   padding: 10px;
   box-shadow: var(--shadow);
+  z-index: 2000;
 }
 .header__container {
   display: flex;
@@ -165,5 +187,241 @@ i {
 
 /* skills */
 .skills {
+  font-family: 'Poppins', sans-serif;
   padding-bottom: 200px;
+}
+.skills .skill_name {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+.skills .skill_name .icon {
+  font-size: 30px;
+}
+.skills_wrap {
+  width: 100%;
+}
+.skills .bar {
+  margin: 0 auto;
+  gap: 15px;
+  letter-spacing: 1px;
+  font-size: 13px;
+  position: relative;
+  width: 95%;
+  margin-bottom: 20px;
+}
+.skills .bar h3 {
+  display: inline-block;
+  font-size: 13px;
+  color: rgb(54, 54, 54);
+  width: 50px;
+}
+
+.skills .bar .thumb {
+  position: relative;
+  display: inline-block;
+  width: 95%;
+  height: 10px;
+  background-color: #eee;
+  border-radius: 60px;
+}
+.skills .bar span {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #4A5CF6;
+  border-radius: 50px;
+}
+.skills .bar.html span{
+  width: 98%;
+}
+.skills .bar.css span{
+  width: 98%;
+}
+.skills .bar.js span{
+  width: 85%;
+}
+.skills .bar.jq span{
+  width: 85%;
+}
+.skills .bar.react span{
+  width: 80%;
+}
+.skills .bar.git span{
+  width: 70%;
+}
+.skills .bar.github span{
+  width: 70%;
+}
+.skills .bar.photo span{
+  width: 60%;
+}
+.skills .bar.xd span{
+  width: 75%;
+}
+.skills .bar abbr {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 400;
+  width: 30px;
+  display: inline-block;
+  height: 20px;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 20px;
+  position: absolute;
+  margin-left: -10px;
+  top: -5px;
+  z-index: 1;
+  background-color: #4A5CF6;
+}
+.skills .bar.html abbr{
+  left: 98%;
+}
+.skills .bar.css abbr{
+  left: 98%;
+}
+.skills .bar.js abbr{
+  left: 85%;
+}
+.skills .bar.jq abbr{
+  left: 85%;
+}
+.skills .bar.react abbr{
+  left: 80%;
+}
+.skills .bar.git abbr{
+  left: 70%;
+}
+.skills .bar.github abbr{
+  left: 70%;
+}
+.skills .bar.photo abbr{
+  left: 60%;
+}
+.skills .bar.xd abbr{
+  left: 75%;
+}
+
+/* qualification */
+#qualification_tab1,
+#qualification_tab2 {
+  display: none;
+}
+#qualification_tab1:checked ~ .qualification__tabs .qb1 {
+  color: var(--point-color);
+}
+#qualification_tab1:checked ~ .qualification__sections .qc1 {
+  display: grid;
+}
+#qualification_tab2:checked ~ .qualification__tabs .qb2 {
+  color: var(--point-color);
+}
+#qualification_tab2:checked ~ .qualification__sections .qc2 {
+  display: block;
+}
+
+
+.qualification {margin-bottom: 150px;}
+.qualification__tabs {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+.qualification__btn {
+  color: #666;
+  font-size: 0.8em;
+}
+.qualification__sections {
+  
+}
+.qualification__content {
+  display: none;
+}
+.qualification__data {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  column-gap: 15px;
+}
+.qualification__data:nth-child(odd) .qualification__text {
+  text-align: end;
+}
+.qualification__title {
+  font-size: 0.8em;
+  font-weight: 500;
+}
+.qualification__subtitle {
+  display: inline-block;
+  font-size: var(--sub-text);
+  color: var(--sub-color);
+}
+.qualification__calender {
+  font-size: 0.6em;
+  color: var(--sub-color);
+}
+.qualification__calender span {
+  font-size: 16px;
+}
+
+.qualification__rounder {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: var(--point-color);
+}
+.qualification__line {
+  display: block;
+  margin: 0 auto;
+  width: 3px;
+  height: 100%;
+  background-color: var(--point-color);
+  transform: translateY(-7px);
+}
+
+/* projects */
+.projects {margin-bottom: 150px}
+.projects__container {
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+}
+.projects__container .swiper-slide {
+  width: 70%;
+  text-align: center;
+  background-color: #ccc;
+}
+.projects__container .swiper-slide .project__img{
+  width: 95%;
+  height: 200px;
+  background-color: #666;
+  margin: 0 auto;
+}
+.projects__container .swiper-slide .project__text {
+  width: 95%;
+  height: 200px;
+  background-color: yellow;
+  margin: 0 auto;
+}
+.projects__container .swiper-next,
+.projects__container .swiper-prev {
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4A5CF6;
+}
+.projects__container .swiper-next {
+  right: 0;
+}
+.projects__container .swiper-pagination {
+  margin-bottom: -10px;
+}
+.projects__container .swiper-pagination-bullet-active {
+  background-color: var(--point-color);
 }
