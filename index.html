@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- google icons -->
   <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  <!-- xecion -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
   <!-- Jquery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
   <!-- Jquery scrollTo-->
@@ -17,6 +19,15 @@
   <!-- swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- sweet alert -->
+  <script src="http://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- email.js -->
+  <script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script defer type="text/javascript">
+    (function(){
+        emailjs.init("LDiKoczuH_s0EKJf6");
+    })();
+  </script>
   <!-- css -->
   <link rel="stylesheet" href="./css/main.css">
   <!-- js -->
@@ -37,7 +48,7 @@
           <li>
             <a href="#about">
               <span class="material-icons-outlined icon">person</span>
-              <p>About Me</p>
+              <p>About</p>
             </a>
           </li>
           <li>
@@ -71,16 +82,18 @@
       
       
         <ul class="web-menu">
-          <li><a href="#!">Home</a></li>
-          <li><a href="#!">About Me</a></li>
-          <li><a href="#!">Skills</a></li>
-          <li><a href="#!">Qualification</a></li>
-          <li><a href="#!">Projects</a></li>
-          <li><a href="#!">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#qualification">Qualification</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="mobile-menu__btn">
           <span class="material-icons-outlined menu_open">grid_view</span>
           <span class="material-icons-outlined menu_close">close</span>
+          <span class="material-icons menu_list_open">list</span>
+          <span class="material-icons menu_list_close">close</span>
         </div>
       </div>
         
@@ -96,8 +109,8 @@
         <p>Hi, I'm ChangMin</p>
         <p>junior Frontend developer</p>
         <p>안녕하세염 안녕하세염 안녕하세염</p>
+        <a class="contact__a" href="#contact"><button class="contact__btn">Contact Me <img class="img-icon" src="./images/icons/message.svg" alt="icon"></button></a>
       </div>
-      <a class="contact__a" href="#contact"><button class="contact__btn">Contact Me <img class="img-icon" src="./images/icons/message.svg" alt="icon"></button></a>
     </div>
   </section>
 
@@ -107,85 +120,90 @@
         <p class="title">About Me</p>
         <p class="sub__title">My introduction</p>
       </div>
-      <div class="about__img">
-        <img src="./images/my.jpg" alt="my">
-      </div>
-      <div class="text__area">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, distinctio.
-      </div>
-      <div class="my__info">
-        <div>
-          <div><span class="material-icons-outlined icon">sentiment_satisfied</span></div>
-          <div><p>이름</p><p>이창민</p></div>
+      <div class="about__flex">
+        <div class="about__img">
+          <img src="./images/my.jpg" alt="my">
         </div>
-        <div>
-          <div><span class="material-icons-outlined icon">calendar_month</span></div>
-          <div><p>생년월일</p><p>96.03.02 (27)</p></div>
+        <div class="text__area">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis, distinctio.</p>
+          <div class="my__info">
+            <div>
+              <div><span class="material-icons-outlined icon">sentiment_satisfied</span></div>
+              <div><p>이름</p><p>이창민</p></div>
+            </div>
+            <div>
+              <div><span class="material-icons-outlined icon">calendar_month</span></div>
+              <div><p>생년월일</p><p>96.03.02 (27)</p></div>
+            </div>
+            <div>
+              <div><span class="material-icons-outlined icon">location_on</span></div>
+              <div><p>주소</p><p>부산광역시 해운대구</p></div>
+            </div>
+            <div>
+              <div><span class="material-icons-outlined icon">school</span></div>
+              <div><p>학력</p><p>동명대학교<br>융합미디어공학 졸업</p></div>
+            </div> 
+          </div>
         </div>
-        <div>
-          <div><span class="material-icons-outlined icon">location_on</span></div>
-          <div><p>주소</p><p>부산광역시 해운대구</p></div>
-        </div>
-        <div>
-          <div><span class="material-icons-outlined icon">school</span></div>
-          <div><p>학력</p><p>동명대학교<br>융합미디어공학 졸업</p></div>
-        </div>
-        
       </div>
     </div>
   </section>
 
   <section class="skills" id="skills">
+
     <div class="inner">
       <div class="sec__title">
         <p class="title">Skills</p>
         <p class="sub__title">My introduction</p>
       </div>
-      <div class="left__skills">
-        <div>
-          <div class="skill_name">
-            <span class="material-icons-outlined icon">code</span>
-            <p>Frontend developer</p>
-          </div>
-          <div class="skills_wrap">
-            <div class="bar html">
-              <h3>HTML5</h3>
-              <div class="thumb"><span></span> <abbr>98%</abbr></div>
+
+      <div class="skill__container">
+        <div class="left__skills">
+          <div>
+            <div class="skill_name">
+              <span class="material-icons-outlined icon">code</span>
+              <p>Frontend developer</p>
             </div>
-            <div class="bar css">
-              <h3>CSS3</h3>
-              <div class="thumb"><span></span><abbr>98%</abbr></div>
-            </div>
-            <div class="bar js">
-              <h3>Javascript</h3>
-              <div class="thumb"><span></span> <abbr>85%</abbr></div>
-            </div>
-            <div class="bar jq">
-              <h3>jQuery </h3>
-              <div class="thumb"><span></span><abbr>85%</abbr></div>
-            </div>
-            <div class="bar react">
-              <h3>React.js </h3>
-              <div class="thumb"><span></span><abbr>80%</abbr></div>
+            <div class="skills_wrap">
+              <div class="bar html">
+                <h3>HTML5</h3>
+                <div class="thumb"><span></span> <abbr>98%</abbr></div>
+              </div>
+              <div class="bar css">
+                <h3>CSS3</h3>
+                <div class="thumb"><span></span><abbr>98%</abbr></div>
+              </div>
+              <div class="bar js">
+                <h3>Javascript</h3>
+                <div class="thumb"><span></span> <abbr>85%</abbr></div>
+              </div>
+              <div class="bar jq">
+                <h3>jQuery </h3>
+                <div class="thumb"><span></span><abbr>85%</abbr></div>
+              </div>
+              <div class="bar react">
+                <h3>React.js </h3>
+                <div class="thumb"><span></span><abbr>80%</abbr></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="right__skills">
-        <div>
+        <div class="right__skills">
           <div>
-            <div class="skill_name">
-              <span class="material-icons-outlined icon">mediation</span>
-              <p>Version control</p>
-            </div>
-            <div class="skills_wrap">
-              <div class="bar git">
-                <h3>Git </h3>
-                <div class="thumb"><span></span><abbr>70%</abbr></div>
+            <div>
+              <div class="skill_name">
+                <span class="material-icons-outlined icon">mediation</span>
+                <p>Version control</p>
               </div>
-              <div class="bar github">
-                <h3>Github </h3>
-                <div class="thumb"><span></span><abbr>70%</abbr></div>
+              <div class="skills_wrap">
+                <div class="bar git">
+                  <h3>Git </h3>
+                  <div class="thumb"><span></span><abbr>70%</abbr></div>
+                </div>
+                <div class="bar github">
+                  <h3>Github </h3>
+                  <div class="thumb"><span></span><abbr>70%</abbr></div>
+                </div>
               </div>
             </div>
           </div>
@@ -221,14 +239,12 @@
 
       <div class="qualification__sections">
         <div class="qualification__content qc1">
+
           <div class="qualification__data data1">
             <div class="qualification__text">
               <h3 class="qualification__title">프론트엔드 개발자 양성과정</h3>
               <span class="qualification__subtitle">그린컴퓨터아카데미</span>
-              <div class="qualification__calender">
-                <span class="material-icons-outlined">calendar_month</span>
-                2022.02 ~ 2022.08
-              </div>
+              <div class="qualification__calender"><span class="material-icons-outlined">calendar_month</span>2022.02 ~ 2022.08</div>
             </div>
 
             <div>
@@ -242,7 +258,7 @@
 
           
           <div class="qualification__data data2">
-            
+          
             <div>
             </div>
 
@@ -250,14 +266,13 @@
               <span class="qualification__rounder"></span>
               <span class="qualification__line"></span>
             </div>
+
             <div class="qualification__text">
               <h3 class="qualification__title">프론트엔드 초격자 패키지</h3>
               <span class="qualification__subtitle">패스트캠퍼스(온라인)</span>
-              <div class="qualification__calender">
-                <span class="material-icons-outlined">calendar_month</span>
-                2021.10 ~ 2022.02
-              </div>
+              <div class="qualification__calender"><span class="material-icons-outlined">calendar_month</span>2021.10 ~ 2022.02</div>
             </div>
+
           </div>
 
 
@@ -298,7 +313,7 @@
                 2022.02 ~ 2022.08
               </div>
             </div>     
-          </div>  <!--education-->
+          </div>
         </div>
 
         <div class="qualification__content qc2">
@@ -361,55 +376,148 @@
             </div>
           </div>
   
-        </div> <!--certificate-->
-
-
-
-
-
-
-        </div>
-      </div>
-      
-
-      
+        </div><!--qualification__content-->
+      </div> <!--qualification__sections-->
     </div> <!--inner-->
   </section>
 
   <section class="projects" id="projects">
+  
     <div class="inner">
       <div class="sec__title">
         <p class="title">Projects</p>
         <p class="sub__title">Most recent work</p>
       </div>
-
       <div class="projects__container">
         <div class="swiper projects__swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="project__img">img</div>
+              <div class="project__img">
+                <img src="./images/projects/duftdoft.jpg" alt="duftdoft_web">
+              </div>
               <div class="project__text">
                 <p class="project__title">DUFT & DOFT</p>
                 <div class="project__info">
                   <p>1인 리뉴얼 프로젝트</p>
                   <p>반응형 사이트</p>
-                  <div>
-                    <span>html</span>
-                    <span>css</span>
-                    <span>js</span>
-                    <span>jquery</span>
-                  </div>
                 </div>
-                <button class="demo__btn">
-                  자세히보기
-                </button>
+                <div class="project__skill-icon">
+                  <div class="htmlbadge">HTML5</div>
+                  <div class="cssbadge">CSS3</div>
+                  <div class="jsbadge">Javascript</div>
+                  <div class="jquerybadge">jQuery</div>
+                </div>
+                <div class="project__btn-area">
+                  <button class="demo__btn">MORE</button>
+                  <button class="demo__btn">DEMO</button>
+                </div>
               </div>
             </div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">
+              <div class="project__img">
+                <img src="./images/projects/megabox.jpg" alt="megabox_web">
+              </div>
+              <div class="project__text">
+                <p class="project__title">MEGABOX 영화관</p>
+                <div class="project__info">
+                  <p>1인 리뉴얼 프로젝트</p>
+                  <p>반응형 사이트</p>
+                </div>
+                <div class="project__skill-icon">
+                  <div class="htmlbadge">HTML5</div>
+                  <div class="cssbadge">CSS3</div>
+                  <div class="jsbadge">Javascript</div>
+                </div>
+                <div class="project__btn-area">
+                  <button class="demo__btn">MORE</button>
+                  <button class="demo__btn">DEMO</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="project__img">
+                <img src="./images/projects/gentle.jpg" alt="gentle_web">
+              </div>
+              <div class="project__text">
+                <p class="project__title">GENTLE MONSTER</p>
+                <div class="project__info">
+                  <p>팀프로젝트</p>
+                  <p>웹 사이트</p>
+                </div>
+                <div class="project__skill-icon">
+                  <div class="htmlbadge">HTML5</div>
+                  <div class="cssbadge">CSS3</div>
+                  <div class="jsbadge">Javascript</div>
+                  <div class="jquerybadge">jQuery</div>
+                </div>
+                <div class="project__btn-area">
+                  <button class="demo__btn">MORE</button>
+                  <button class="demo__btn">DEMO</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="project__img">
+                <img src="./images/projects/gentle-react.jpg" alt="gentle_web">
+              </div>
+              <div class="project__text">
+                <p class="project__title">GENTLE MONSTER</p>
+                <div class="project__info">
+                  <p>1인 리뉴얼 프로젝트</p>
+                  <p>웹 사이트</p>
+                </div>
+                <div class="project__skill-icon">
+                  <div class="reactbadge">React</div>
+                </div>
+                <div class="project__btn-area">
+                  <button class="demo__btn">MORE</button>
+                  <button class="demo__btn">DEMO</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="project__img">
+                <img src="./images/projects/starbucks.jpg" alt="starbucks_web">
+              </div>
+              <div class="project__text">
+                <p class="project__title">STARBUCKS</p>
+                <div class="project__info">
+                  <p>클론코딩</p>
+                </div>
+                <div class="project__skill-icon">
+                  <div class="htmlbadge">HTML5</div>
+                  <div class="cssbadge">CSS3</div>
+                  <div class="jsbadge">Javascript</div>
+                  <div class="jquerybadge">jQuery</div>
+                </div>
+                <div class="project__btn-area">
+                  <button class="demo__btn">MORE</button>
+                  <button class="demo__btn">DEMO</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="project__img">
+                <img src="./images/projects/waterbomb.jpg" alt="waterbomb">
+              </div>
+              <div class="project__text">
+                <p class="project__title">WATERBOMB</p>
+                <div class="project__info">
+                  <p>클론코딩</p>
+                  <p>반응형 사이트</p>
+                </div>
+                <div class="project__skill-icon">
+                  <div class="htmlbadge">HTML5</div>
+                  <div class="cssbadge">CSS3</div>
+                  <div class="jsbadge">Javascript</div>
+                  <div class="jquerybadge">jQuery</div>
+                </div>
+                <div class="project__btn-area">
+                  <button class="demo__btn">MORE</button>
+                  <button class="demo__btn">DEMO</button>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="swiper-next">
             <span class="material-icons-outlined">
@@ -423,7 +531,83 @@
           </div>
           <div class="swiper-pagination"></div>
         </div>
-      </div>
+      </div><!--projects__container-->
+
+      <div class="web-project__container">
+        <div class="web-project__contents">
+          <div class="web-project wp1">
+            <div class="hover__text">
+              <div class="text__area">
+                <p>DUFT & DOFT</p>
+                <p>반응형 리뉴얼 웹사이트</p>
+                <p>1인 프로젝트</p>
+              </div>
+              <button class="demo__btn">DEMO</button>
+              <button class="demo__btn">MORE</button>
+            </div>
+          </div><!--web-project-->
+          <div class="web-project wp2">
+            <div class="hover__text">
+              <div class="text__area">
+                <p>DUFT & DOFT</p>
+                <p>반응형 리뉴얼 웹사이트</p>
+                <p>1인 프로젝트</p>
+              </div>
+              <button class="demo__btn">DEMO</button>
+              <button class="demo__btn">MORE</button>
+            </div>
+          </div><!--web-project-->
+          <div class="web-project wp3">
+            <div class="hover__text">
+              <div class="text__area">
+                <p>DUFT & DOFT</p>
+                <p>반응형 리뉴얼 웹사이트</p>
+                <p>1인 프로젝트</p>
+              </div>
+              <button class="demo__btn">DEMO</button>
+              <button class="demo__btn">MORE</button>
+            </div>
+          </div><!--web-project-->
+          <div class="web-project wp4">
+            <div class="hover__text">
+              <div class="text__area">
+                <p>DUFT & DOFT</p>
+                <p>반응형 리뉴얼 웹사이트</p>
+                <p>1인 프로젝트</p>
+              </div>
+              <button class="demo__btn">DEMO</button>
+              <button class="demo__btn">MORE</button>
+            </div>
+          </div><!--web-project-->
+          <div class="web-project wp5">
+            <div class="hover__text">
+              <div class="text__area">
+                <p>DUFT & DOFT</p>
+                <p>반응형 리뉴얼 웹사이트</p>
+                <p>1인 프로젝트</p>
+              </div>
+              <button class="demo__btn">DEMO</button>
+              <button class="demo__btn">MORE</button>
+            </div>
+          </div><!--web-project-->
+          <div class="web-project wp6">
+            <div class="hover__text">
+              <div class="text__area">
+                <p>DUFT & DOFT</p>
+                <p>반응형 리뉴얼 웹사이트</p>
+                <p>1인 프로젝트</p>
+              </div>
+              <button class="demo__btn">DEMO</button>
+              <button class="demo__btn">MORE</button>
+            </div>
+          </div><!--web-project-->
+
+
+
+
+        </div><!--web-project__contents-->
+      </div><!--web-project__container-->
+
     </div>
   </section>
 
@@ -433,14 +617,52 @@
         <p class="title">Contact Me</p>
         <p class="sub__title">Get in touch</p>
       </div>
+      <div class="contact__content">
+        <div class="contact__container">
+          <div class="contact__data">
+            <i class="xi-call icon"></i>
+            <div>
+              <p class="contact__data__title">TEL.</p>
+              <p class="contact__data__subtitle">010-5671-7935</p>
+            </div>
+          </div>
+          <div class="contact__data">
+            <i class="xi-mail-o icon"></i>
+            <div>
+              <p class="contact__data__title">EMAIL.</p>
+              <p class="contact__data__subtitle">lcmin0302@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact__data">
+            <i class="xi-github icon"></i>
+            <div>
+              <p class="contact__data__title">Github.</p>
+              <a class="contact__data__subtitle" href="https://github.com/ChangMin-2">github.com/ChangMin-2</a>
+            </div>
+          </div>
+        </div> <!--contact__container-->
 
-      <div class="contact__container">
-        <div></div>
-      </div>
-    </div>
+        <div class="form">
+          <form>
+            <input type="text" placeholder="Your Name" id="name" autocomplete="off" required>
+            <input type="email" placeholder="Email ID" id="email" autocomplete="off" required>
+            <input type="text" placeholder="Your Phone(생략가능)" id="tel" autocomplete="off">
+            <input type="text" placeholder="Subject" id="subject" autocomplete="off" required>
+            <textarea id="message" placeholder="Message" rows="10"></textarea>
+            <button id="send__btn">Send</button>
+          </form>
+        </div><!--form-->
+      </div><!--contact__content-->
+      
+    </div><!--inner-->
   </section>
 
-
+  <footer class="footer">
+    <div class="inner">
+      <i class="xi-github"></i>
+      <p>끝까지 봐주셔서 감사합니다.</p>
+    </div>
+  </footer>
 
   
 </body>
