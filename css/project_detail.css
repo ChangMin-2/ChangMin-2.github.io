@@ -117,6 +117,16 @@ body {
   font-size: 1.1em;
   margin-bottom: 10px;
 }
+.flex-wrap .text__area a {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  justify-content: end;
+  font-size: 0.6em;
+  margin-top: 40px;
+  font-family: 500;
+  color: #666;
+}
 .flex-wrap .text__area p {
   font-size: 0.9em;
   color: #333;
