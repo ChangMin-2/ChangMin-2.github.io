@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- google icons -->
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  <!-- xecion -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <!-- Jquery -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <!-- gsap cdn -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <!-- gsap scrollTo -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js" integrity="sha512-lZACdYsy0W98dOcn+QRNHDxFuhm62lfs8qK5+wPp7X358CN3f+ml49HpnwzTiXFzETs4++fADePDI+L2zwlm7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- gsap scrollTrigger -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+  <!-- scrollMagic -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/project_detail.css">
+  <script defer src="./js/detail.js"></script>
+  <title>project detail</title>
+</head>
+<body>
+  <header class="header">
+    <div class="inner">
+      <a class="back__btn" href="./index.html"><span class="material-icons">keyboard_backspace</span></a>
+      <img class="logo" src="./images/logoblack.png" alt="logo">
+    </div>
+  </header>
+
+  <section class="visual">
+    <div class="inner">
+      <img src="./images/projects/mockup/doftduft1.png" alt="project">
+    </div>
+  </section>
+  
+  <section class="project__info">
+    <div class=".inner">
+      <div class="project__title__container">
+        <div class="project__title__contents">
+          <div class="project__title">DUFT & DOFT</div>
+          <div class="project__subtitle">반응형 웹 프로젝트</div>
+        </div>
+        <a href="#!"><div class="demo__btn">사이트 바로가기<span class="material-icons-outlined">arrow_forward_ios</span></div></a>
+      </div>
+    
+      
+      <ul class="project__subinfo">
+        <li>1인 프로젝트</li>
+        <li>모바일 / 태블릿 / PC 반응형 사이트</li>
+        <li>HTML / CSS / Javascript 하드코딩</li>
+        <li>바디케어제품</li>
+      </ul>
+      
+      
+      <div class="skills">
+        <p>기술 스택</p>
+        <span class="htmlbadge">HTML5</span>
+        <span class="cssbadge">CSS3</span>
+        <span class="jsbadge">Javascript</span>
+        <span class="jquerybadge">jQuery</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail__des">
+      <div class="flex-wrap scroll_el">
+        <div class="inner">
+          <div class="img__area">
+            <img src="./images/projects/mockup/doftduft.png" alt="">
+          </div>
+          <div class="text__area">
+            <h3 class="detail__title">디바이스 크기에 따른 반응형 웹사이트</h3>
+            <p>
+              PC / 태블릿 / 모바일 디바이스에 맞춰 반응형으로 제작했습니다.<br>
+              
+              PC 웹 을 우선적으로 제작 후 모바일버전을 제작하는 방법은 더 많은 제어요소가 필요해서<br>
+              모바일 웹 제작 후 Media Query를 사용해 태블릿 버전과 PC 버전에 각각 다른 코드가 적용되는 방식으로 문제를 해결했습니다. <br> 
+            </p>
+          </div>
+        </div>
+      </div><!--flex-wrap-->
+      <div class="flex-wrap scroll_el">
+        <div class="inner">
+          <div class="img__area">
+            <img src="./images/projects/project1/project1-1.jpg" alt="">
+          </div>
+          <div class="text__area">
+            <h3 class="detail__title">radio&label setInterval</h3>
+            <p>
+              radio버튼와 label사용<br>
+              
+              자동적으로 Tab메뉴가 변경되어 
+              오른쪽의 이미지를 변경시켜주기위해 redio버튼과 setInterval함수 사용
+            </p>
+          </div>
+        </div>
+      </div><!--flex-wrap-->
+  </section>
+
+  <a href="#!"><div class="demo__btn">사이트 바로가기<span class="material-icons-outlined">arrow_forward_ios</span></div></a>
+</body>
+</html>
