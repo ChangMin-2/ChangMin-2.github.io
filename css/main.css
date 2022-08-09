@@ -671,13 +671,22 @@
   text-align: center;
 }
 .footer .inner i {
-  font-size: 24px;
+  font-size: 36px;
   color: var(--sub-color);
   margin: 30px 0;
+  transition: all 0.3s;
+}
+.footer .inner i:hover {
+  color: #000;
+  transform: translateY(-5px);
 }
 .footer .inner p {
-  font-size: 0.8em;
+  font-size: 1em;
   color: var(--sub-color);
+  margin-bottom: 10px;
+}
+.footer .inner .copyright {
+  font-size: 0.6em;
 }
 
 
