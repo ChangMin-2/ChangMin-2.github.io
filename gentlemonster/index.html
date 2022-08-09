@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- gsap cdn - 애니메이션 플러그인 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js" integrity="sha512-lZACdYsy0W98dOcn+QRNHDxFuhm62lfs8qK5+wPp7X358CN3f+ml49HpnwzTiXFzETs4++fADePDI+L2zwlm7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- google icons -->
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  <!-- xeicon -->
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <!-- css -->
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- js -->
+  <script defer src="./js/main.js"></script>
+  <title>GENTLE MONSTER</title>
+</head>
+
+<body>
+  <!-- Header&search&cart&fixed-btn  -->
+  <header class="header">
+    <div class="header__inner">
+      <a class="logo" href="/">GENTLE MONSTER</a>
+      <ul class="lnb">
+        <li>
+          <a href="#!">선글라스</a>
+          <div class="sub-menu">
+            <ul>
+            <li><a href="./sub_page/sub_page.html">전체보기</a></li>
+            <li><a href="javasrcipt:void(0)">신상 컬렉션</a></li>
+            <li><a href="javasrcipt:void(0)">베스트</a></li>
+            <li><a href="javasrcipt:void(0)">선물추천</a></li>
+            <li><a href="javasrcipt:void(0)">클래식</a></li>
+            <li><a href="javasrcipt:void(0)">틴트렌즈</a></li>
+            <li><a href="javasrcipt:void(0)">사각 프레임</a></li>
+            <li><a href="javasrcipt:void(0)">켓아이 프레임</a></li>
+            <li><a href="javasrcipt:void(0)">원형 프레임</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#!">안경</a>
+          <div class="sub-menu">
+            <ul>
+              <li><a href="javasrcipt:void(0)">전체보기</a></li>
+              <li><a href="javasrcipt:void(0)">베스트</a></li>
+              <li><a href="javasrcipt:void(0)">선물추천</a></li>
+              <li><a href="javasrcipt:void(0)">블루라이트 차단</a></li>
+              <li><a href="javasrcipt:void(0)">클래식</a></li>
+              <li><a href="javasrcipt:void(0)">틴트 렌즈</a></li>
+              <li><a href="javasrcipt:void(0)">사각 프레임</a></li>
+              <li><a href="javasrcipt:void(0)">원형 프레임</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#!">스타일</a>
+          <div class="sub-menu">
+            <ul>
+              <li><a href="javasrcipt:void(0)">ALL</a></li>
+              <li><a href="javasrcipt:void(0)">Women</a></li>
+              <li><a href="javasrcipt:void(0)">Men</a></li>   
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#!">선물추천</a>
+          <div class="sub-menu">
+            <ul>
+              <li><a href="javasrcipt:void(0)">GIFT CARD</a></li>
+              <li><a href="javasrcipt:void(0)">For Women</a></li>
+              <li><a href="javasrcipt:void(0)">For Men</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#!">서비스</a>
+          <div class="sub-menu">
+            <ul>
+              <li><a href="javasrcipt:void(0)">매장 보기</a></li>
+              <li><a href="javasrcipt:void(0)">수리 서비스</a></li>
+              <li><a href="javasrcipt:void(0)">문의</a></li>     
+            </ul>
+          </div>
+        </li>
+        <li><a href="#!">콜라보레이션</a></li>
+        <li><a href="#!">브랜드이슈</a></li>
+      </ul>
+      <ul class="gnb">
+        <li><a href="#!"><span class="material-icons language-icons">language</span>Shop in KR</a></li>
+        <li><a href="#!">Sign In</a></li>
+        <li><a href="#!">Sign Up</a></li>
+        <li><a href="#!">My</a></li>
+        <li>
+          <a href="#!">
+          <span class="material-icons search-icons">search</span>
+          <span class="material-icons search-close-icons">close</span>
+          </a>
+        </li>
+        <li>
+          <a href="#!">
+            <span class="material-icons shopping_cart-icons">shopping_cart</span>
+            <span class="material-icons cart-close-icons">vertical_align_top</span>
+          </a>
+          </li>
+      </ul>
+    </div>
+  </header>
+  
+  <div class="cart">
+    <div class="cart__contents">
+      <div class="cart__title">쇼핑백</div>
+      <ul class="cart__sec">
+        <li class="cart-none">현재 장바구니가 비어있습니다.</li>
+      </ul>
+    </div>
+    <div class="cart__price">
+      <div><p>배송비</p><p>무료</p></div>
+      <div><p>합계</p><p>0원</p></div>
+      <button>결제하기</button>
+      <button class="grayBtn">자세히보기</button>
+    </div>
+  </div>
+  
+  <div class="search">
+    <div class="inner">
+      <div class="search__title">고객님, 무엇을 찾으시나요?</div>
+      <div class="input">
+        <input type="text" placeholder="상품을 찾아보세요" autofocus>
+        <span class="material-icons">search</span>
+      </div>
+
+      <div class="search__contents">
+        <ul>
+          <li class="search__contents__title">인기검색어</li>
+          <li><a href="#!">허 01</a></li>
+          <li><a href="#!">토미 01</a></li>
+          <li><a href="#!">토미 01(BR)</a></li>
+          <li><a href="#!">드리머 17 01</a></li>
+          <li><a href="#!">알리오 C1</a></li>
+          <li><a href="#!">아가일 01</a></li>
+        </ul>
+        <div class="more_search">
+          <p class="search__contents__title">다양한 컬렉션을 만나보세요.</p>
+          <div>
+            <div class="search__contents_rank">
+              <a href="#!">
+                <img src="./images/main_img/glass_01.jpg" alt="glass">
+                <p>안경</p>
+              </a>
+              <a href="#!">
+                <img src="./images/main_img/sun_01.jpg" alt="sun">
+                <p>선글라스</p>
+              </a>
+              <a href="#!">
+                <img src="./images/main_img/glass_02.jpg" alt="glass">
+                <p>베스트</p>
+              </a>
+              <a href="#!">
+                <img src="./images/main_img/sun_02.jpg" alt="sun">
+                <p>베스트</p>
+              </a>
+              <a href="#!">
+                <img src="./sub_page/images/sub_img/product_11_01.jpg" alt="new">
+                <p>2022 컬렉션</p>
+              </a>
+              <a href="#!">
+                <img src="./sub_page/images/sub_img/product_07_01.jpg" alt="sq">
+                <p>사각프레임</p>
+              </a>
+              <a href="#!">
+                <img src="./sub_page/images/sub_img/product_10_04.jpg" alt="cat">
+                <p>켓아이프레임</p>
+              </a>
+              <a href="#!">
+                <img src="./sub_page/images/sub_img/product_44_01.jpg" alt="eq">
+                <p>원형프레임</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="fixed-btn">
+    <ul>
+      <li class="to-top"><span class="material-icons">vertical_align_top</span></li>
+      <li>
+        <span class="material-icons">favorite_border</span>
+        <div class="count-heart">0</div>
+      </li>
+    </ul>
+  </div>
+  <!-- Header&search&cart&fixed-btn  -->
+
+  <section class="visual">
+    <div class="visual_bg"></div>
+    <div class="inner">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/main_img/visual_01.png" alt="visual_01">
+            <div class="text-area">
+              <p>손흥민 X 젠틀몬스터</p>
+              <p>오랫동안 참아왔던 말을 외쳐드립니다!</p>
+              <p>우리는 월드클래스 손흥민의 시대에 살고있습니다.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/main_img/visual_02.png" alt="visual_01">
+            <div class="text-area">
+              <p>제니 X 젠틀몬스터</p>
+              <p>젠틀가든으로의 초대합니다.</p>
+              <p>전세계 5개 도시에서만 만나볼 수 있는 ’젠틀가든’<br>상상 속에만 있던 환상적인 마을의 풍경을 그대로 재현합니다.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/main_img/visual_03.png" alt="visual_01">
+            <div class="text-area">
+              <p>몽클레어 X 젠틀몬스터</p>
+              <p>몽클레르 지니어스쇼 컬렉션</p>
+              <p>이번 컬렉션에는 아이웨어 뿐만 아니라 <br>젠틀몬스터가 디자인한 의류 제품을 함께 선보입니다.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/main_img/visual_04.png" alt="visual_01">
+            <div class="text-area">
+              <p>2022 신상 컬렉션</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/main_img/visual_05.png" alt="visual_01">
+            <div class="text-area">
+              <p>HBA X 젠틀몬스터</p>
+              <p>HBA와의 두 번째 협업 컬렉션</p>
+              <p>과감한 커브가 돋보이는 고글 형태의 선글라스,<br> 안타고니스트와 미국 익스클루시브로 판매되는<br>골드 틴티드 아이웨어, 마더로 구성되어 있습니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-prev">
+        <i class="xi-angle-left-thin"></i>
+      </div>
+      <div class="swiper-next">
+        <i class="xi-angle-right-thin"></i>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="pause swiper__btn">
+        <span class="material-icons">pause</span>
+      </div>
+      <div class="start swiper__btn">
+        <span class="material-icons">play_arrow</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="ranking">
+    <div class="inner">
+      <input type="radio" name="rankRadio" id="rankRadio1" class="rankRadio" checked>
+      <input type="radio" name="rankRadio" id="rankRadio2" class="rankRadio">
+      <input type="radio" name="rankRadio" id="rankRadio3" class="rankRadio">
+      <input type="radio" name="rankRadio" id="rankRadio4" class="rankRadio">
+      <input type="radio" name="rankRadio" id="rankRadio5" class="rankRadio">
+      <div class="text-area">
+        <div class="ranking__title">
+          <p>KEYWORD<br>RANKGING</p>
+        </div>
+        <div class="rank">
+          <ul>
+            <li class="rank1">
+              <span>1. 선글라스</span>
+              <div class="rank-hover__img">
+                <a href="./sub_page/sub_page.html">더보기</a>
+                <img src="./images/main_img/rank_01_01.jpg" alt="rank">
+                <img src="./images/main_img/rank_01_02.jpg" alt="rank">
+                <img src="./images/main_img/rank_01_03.jpg" alt="rank">
+                <img src="./images/main_img/rank_01_04.jpg" alt="rank">
+                <img src="./images/main_img/rank_01_05.jpg" alt="rank">
+              </div>
+            </li>
+            <li class="rank2">
+              <span>2. 안경</span>
+              <div class="rank-hover__img">
+                <a href="#!">더보기</a>
+                <img src="./images/main_img/rank_02_01.jpg" alt="rank">
+                <img src="./images/main_img/rank_02_02.jpg" alt="rank">
+                <img src="./images/main_img/rank_02_03.jpg" alt="rank">
+                <img src="./images/main_img/rank_02_04.jpg" alt="rank">
+                <img src="./images/main_img/rank_02_05.jpg" alt="rank">
+              </div>
+            </li>
+            <li class="rank3">
+              <span>3. 선물추천</span>
+              <div class="rank-hover__img">
+                <a href="#!">더보기</a>
+                <img src="./images/main_img/rank_03_01.jpg" alt="rank">
+                <img src="./images/main_img/rank_03_02.jpg" alt="rank">
+                <img src="./images/main_img/rank_03_03.jpg" alt="rank">
+                <img src="./images/main_img/rank_03_04.jpg" alt="rank">
+                <img src="./images/main_img/rank_03_05.jpg" alt="rank">
+              </div>
+            </li>
+            <li class="rank4">
+              <span>4. 2022 컬렉션</span>
+              <div class="rank-hover__img">
+                <a href="#!">더보기</a>
+                <img src="./images/main_img/rank_04_01.jpg" alt="rank">
+                <img src="./images/main_img/rank_04_02.jpg" alt="rank">
+                <img src="./images/main_img/rank_04_03.jpg" alt="rank">
+                <img src="./images/main_img/rank_04_04.jpg" alt="rank">
+                <img src="./images/main_img/rank_04_05.jpg" alt="rank">
+              </div>
+            </li>
+            <li class="rank5">
+              <span>5. 틴트렌즈</span>
+              <div class="rank-hover__img">
+                <a href="#!">더보기</a>
+                <img src="./images/main_img/rank_01_01.jpg" alt="rank">
+                <img src="./images/main_img/rank_01_02.jpg" alt="rank">
+                <img src="./images/main_img/rank_01_03.jpg" alt="rank">
+                <img src="./images/main_img/rank_01_04.jpg" alt="rank">
+                <img src="./images/main_img/rank_01_05.jpg" alt="rank">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="img-area">
+        <div class="img-hover-area img-area-01">
+          <div class="rank-img__left"><img src="./images/main_img/rank_01_06.jpg" alt="rank"></div>
+          <div class="rank-img__right">
+            <div class="rank-img__right__top">
+              <img src="./images/main_img/rank_01_07.jpg" alt="rank">
+              <img src="./images/main_img/rank_01_08.jpg" alt="rank">
+            </div>
+            <div class="rank-img__right__bottom">
+              <div>
+                <p class="logo">GENTLE MONSER</p>
+                <p>sunglasses</p>
+                <p>
+                  With<br>
+                  Summer Sunglasses<br>
+                </p>
+              </div>
+              <img src="./images/main_img/rank_01_09.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="img-hover-area img-area-02">
+          <div class="rank-img__left"><img src="./images/main_img/rank_02_06.jpg" alt="rank"></div>
+          <div class="rank-img__right">
+            <div class="rank-img__right__top">
+              <img src="./images/main_img/rank_02_07.jpg" alt="rank">
+              <img src="./images/main_img/rank_02_08.jpg" alt="rank">
+            </div>
+            <div class="rank-img__right__bottom">
+              <div>
+                <p class="logo">GENTLE MONSER</p>
+                <p>Glasses</p>
+                <p>
+                  Gentle Monster<br>
+                  in Daily Life
+                </p>
+              </div>
+              <img src="./images/main_img/rank_02_09.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="img-hover-area img-area-03">
+          <div class="rank-img__left"><img src="./images/main_img/rank_03_06.jpg" alt="rank"></div>
+          <div class="rank-img__right">
+            <div class="rank-img__right__top">
+              <img src="./images/main_img/rank_03_07.jpg" alt="rank">
+              <img src="./images/main_img/rank_03_08.jpg" alt="rank">
+            </div>
+            <div class="rank-img__right__bottom">
+              <div>
+                <p class="logo">GENTLE MONSER</p>
+                <p>Gift recommendation</p>
+                <p>
+                  Something that<br>
+                  everyone would like
+                </p>
+              </div>
+              <img src="./images/main_img/rank_03_09.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="img-hover-area img-area-04">
+          <div class="rank-img__left"><img src="./images/main_img/rank_04_06.jpg" alt="rank"></div>
+          <div class="rank-img__right">
+            <div class="rank-img__right__top">
+              <img src="./images/main_img/rank_04_07.jpg" alt="rank">
+              <img src="./images/main_img/rank_04_08.jpg" alt="rank">
+            </div>
+            <div class="rank-img__right__bottom">
+              <div>
+                <p class="logo">GENTLE MONSER</p>
+                <p>2022 Collection</p>
+                <p>
+                  New Metal Detail,<br>New Collection
+                </p>
+              </div>
+              <img src="./images/main_img/rank_04_09.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="img-hover-area img-area-05">
+          <div class="rank-img__left"><img src="./images/main_img/rank_05_06.jpg" alt="rank"></div>
+          <div class="rank-img__right">
+            <div class="rank-img__right__top">
+              <img src="./images/main_img/rank_05_07.jpg" alt="rank">
+              <img src="./images/main_img/rank_05_08.jpg" alt="rank">
+            </div>
+            <div class="rank-img__right__bottom">
+              <div>
+                <p class="logo">GENTLE MONSER</p>
+                <p>Tint lens</p>
+                <p>
+                  Various Colors,<br>
+                  Different Frames
+                </p>
+              </div>
+              <img src="./images/main_img/rank_05_09.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="product">
+    <div class="product__title">NEW PRODUCT</div>
+    <div class="product__tab">
+      <span class="product__tab-01">선글라스</span>
+      <span class="product__tab-02">안경</span>
+    </div>
+
+    <div class="swiper product__swiper sunglasses">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide ">
+          <div class="prodect__img-area">
+            <img src="./images/main_img/sun_01.jpg" alt="sun">
+            <div class="prodect__img-hover">
+              <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+              <span class="material-icons-outlined favorite-icon">favorite</span>
+              <span class="material-icons shopping_cart-icon">shopping_cart</span>
+            </div>
+          </div>
+          <div class="prodect__text-area">
+            <p>랭</p>
+            <p>249,000원</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="prodect__img-area">
+            <img src="./images/main_img/sun_02.jpg" alt="sun">
+            <div class="prodect__img-hover">
+              <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+              <span class="material-icons-outlined favorite-icon">favorite</span>
+              <span class="material-icons shopping_cart-icon">shopping_cart</span>
+            </div>
+          </div>
+          <div class="prodect__text-area">
+            <p>론디</p>
+            <p>259,000원</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="prodect__img-area">
+            <img src="./images/main_img/sun_03.jpg" alt="sun">
+            <div class="prodect__img-hover">
+              <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+              <span class="material-icons-outlined favorite-icon">favorite</span>
+              <span class="material-icons shopping_cart-icon">shopping_cart</span>
+            </div>
+          </div>
+          <div class="prodect__text-area">
+            <p>밀</p>
+            <p>249,000원</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="prodect__img-area">
+            <img src="./images/main_img/sun_04.jpg" alt="sun">
+            <div class="prodect__img-hover">
+              <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+              <span class="material-icons-outlined favorite-icon">favorite</span>
+              <span class="material-icons shopping_cart-icon">shopping_cart</span>
+            </div>
+          </div>
+          <div class="prodect__text-area">
+            <p>릴리트</p>
+            <p>259,000원</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="prodect__img-area">
+            <img src="./images/main_img/sun_05.jpg" alt="sun">
+            <div class="prodect__img-hover">
+              <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+              <span class="material-icons-outlined favorite-icon">favorite</span>
+              <span class="material-icons shopping_cart-icon">shopping_cart</span>
+            </div>
+          </div>
+          <div class="prodect__text-area">
+            <p>로셀</p>
+            <p>259,000원</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="prodect__img-area">
+            <img src="./images/main_img/sun_06.jpg" alt="sun">
+            <div class="prodect__img-hover">
+              <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+              <span class="material-icons-outlined favorite-icon">favorite</span>
+              <span class="material-icons shopping_cart-icon">shopping_cart</span>
+            </div>
+          </div>
+          <div class="prodect__text-area">
+            <p>로지</p>
+            <p>259,000원</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="prodect__img-area">
+            <img src="./images/main_img/sun_07.jpg" alt="sun">
+            <div class="prodect__img-hover">
+              <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+              <span class="material-icons-outlined favorite-icon">favorite</span>
+              <span class="material-icons shopping_cart-icon">shopping_cart</span>
+            </div>
+          </div>
+          <div class="prodect__text-area">
+            <p>프리다</p>
+            <p>259,000원</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="prodect__img-area">
+            <img src="./images/main_img/sun_08.jpg" alt="sun">
+            <div class="prodect__img-hover">
+              <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+              <span class="material-icons-outlined favorite-icon">favorite</span>
+              <span class="material-icons shopping_cart-icon">shopping_cart</span>
+            </div>
+          </div>
+          <div class="prodect__text-area">
+            <p>토미</p>
+            <p>249,000원</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="prodect__img-area">
+            <img src="./images/main_img/sun_09.jpg" alt="sun">
+            <div class="prodect__img-hover">
+              <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+              <span class="material-icons-outlined favorite-icon">favorite</span>
+              <span class="material-icons shopping_cart-icon">shopping_cart</span>
+            </div>
+          </div>
+          <div class="prodect__text-area">
+            <p>탐부</p>
+            <p>320,000원</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="prodect__img-area">
+            <img src="./images/main_img/sun_10.jpg" alt="sun">
+            <div class="prodect__img-hover">
+              <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+              <span class="material-icons-outlined favorite-icon">favorite</span>
+              <span class="material-icons shopping_cart-icon">shopping_cart</span>
+            </div>
+          </div>
+          <div class="prodect__text-area">
+            <p>모마티</p>
+            <p>249,000원</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper product__swiper glasses">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide ">
+          <div class="prodect__img-area">
+            <img src="./images/main_img/glass_01.jpg" alt="glasses">
+            <div class="prodect__img-hover">
+              <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+              <span class="material-icons-outlined favorite-icon">favorite</span>
+              <span class="material-icons shopping_cart-icon">shopping_cart</span>
+            </div>
+          </div>
+          <div class="prodect__text-area">
+            <p>버티</p>
+            <p>259,000원</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="prodect__img-area">
+            <img src="./images/main_img/glass_02.jpg" alt="glasses">
+            <div class="prodect__img-hover">
+              <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+              <span class="material-icons-outlined favorite-icon">favorite</span>
+              <span class="material-icons shopping_cart-icon">shopping_cart</span>
+            </div>
+          </div>
+          <div class="prodect__text-area">
+            <p>디디온</p>
+            <p>259,000원</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="prodect__img-area">
+            <img src="./images/main_img/glass_03.jpg" alt="glasses">
+            <div class="prodect__img-hover">
+              <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+              <span class="material-icons-outlined favorite-icon">favorite</span>
+              <span class="material-icons shopping_cart-icon">shopping_cart</span>
+            </div>
+          </div>
+          <div class="prodect__text-area">
+            <p>라우디</p>
+            <p>259,000원</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="prodect__img-area">
+            <img src="./images/main_img/glass_04.jpg" alt="glasses">
+            <div class="prodect__img-hover">
+              <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+              <span class="material-icons-outlined favorite-icon">favorite</span>
+              <span class="material-icons shopping_cart-icon">shopping_cart</span>
+            </div>
+          </div>
+          <div class="prodect__text-area">
+            <p>가비</p>
+            <p>259,000원</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="prodect__img-area">
+            <img src="./images/main_img/glass_05.jpg" alt="glasses">
+            <div class="prodect__img-hover">
+              <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+              <span class="material-icons-outlined favorite-icon">favorite</span>
+              <span class="material-icons shopping_cart-icon">shopping_cart</span>
+            </div>
+          </div>
+          <div class="prodect__text-area">
+            <p>드리머</p>
+            <p>259,000원</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="prodect__img-area">
+            <img src="./images/main_img/glass_06.jpg" alt="glasses">
+            <div class="prodect__img-hover">
+              <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+              <span class="material-icons-outlined favorite-icon">favorite</span>
+              <span class="material-icons shopping_cart-icon">shopping_cart</span>
+            </div>
+          </div>
+          <div class="prodect__text-area">
+            <p>데우스</p>
+            <p>259,000원</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="prodect__img-area">
+            <img src="./images/main_img/glass_07.jpg" alt="glasses">
+            <div class="prodect__img-hover">
+              <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+              <span class="material-icons-outlined favorite-icon">favorite</span>
+              <span class="material-icons shopping_cart-icon">shopping_cart</span>
+            </div>
+          </div>
+          <div class="prodect__text-area">
+            <p>로지</p>
+            <p>259,000원</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="prodect__img-area">
+            <img src="./images/main_img/glass_08.jpg" alt="glasses">
+            <div class="prodect__img-hover">
+              <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+              <span class="material-icons-outlined favorite-icon">favorite</span>
+              <span class="material-icons shopping_cart-icon">shopping_cart</span>
+            </div>
+          </div>
+          <div class="prodect__text-area">
+            <p>릭</p>
+            <p>259,000원</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="prodect__img-area">
+            <img src="./images/main_img/glass_09.jpg" alt="glasses">
+            <div class="prodect__img-hover">
+              <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+              <span class="material-icons-outlined favorite-icon">favorite</span>
+              <span class="material-icons shopping_cart-icon">shopping_cart</span>
+            </div>
+          </div>
+          <div class="prodect__text-area">
+            <p>마이 마</p>
+            <p>259,000원</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="prodect__img-area">
+            <img src="./images/main_img/glass_10.jpg" alt="glasses">
+            <div class="prodect__img-hover">
+              <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+              <span class="material-icons-outlined favorite-icon">favorite</span>
+              <span class="material-icons shopping_cart-icon">shopping_cart</span>
+            </div>
+          </div>
+          <div class="prodect__text-area">
+            <p>드리머호프</p>
+            <p>259,000원</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <section class="banner">
+    <div class="banner__pattern"></div>
+    <div class="banner__contents">
+      <div class="banner__img">
+        <img src="./images/main_img/bannerFront.jpg" alt="banner">
+      </div>
+      <p class="banner__title">HAUS SHANGHAI</p>
+      <p class="banner__desc">'HAUS 0 10 10 10 1'은 젠틀몬스터가 보여줄 새로운 퓨처리테일의 방향성을 의미합니다.</p>
+    </div>
+  </section>
+
+  <section class="collabo">
+    <p class="collabo__title">COLLABORATION</p>
+    <div class="collabo-container">
+      <div class="collabo-wrap collabo-01 hover">
+        <div class="collabo__img">
+          <img src="./images/main_img/collabo_01.jpg" alt="collabo">
+          <div class="none_hover-text"> 
+            <img src="./images/main_img/logo.png" alt="logo">
+            X SON 7
+          </div>
+        </div>
+        <div class="collabo__text">
+          <p class="collabo__main__text">
+            SON 7<br>
+            X<br>
+            GENTLEMONSTER
+          </p>
+          <p class="collabo__sub__text">
+            선글라스 2종으로 구성된 이번 SON 7 컬렉션은<br>
+            젠틀몬스터의 독보적인 디자인이 적용된<br>
+            아세테이트 소재와 틴트 렌즈로 완성되었으며,<br>템플에는 이번 협업을 기념하여<br> 'GENTLE MOSTER X SON 7'각인이 새겨져 있습니다.
+          </p>
+          <p class="collabo__bottom__text">
+            HAUS DOSAN 22.07.05 ~ 22.08.08
+          </p>
+        </div>
+      </div>
+      <div class="collabo-wrap collabo-02">
+        <div class="collabo__img">
+          <img src="./images/main_img/collabo_02.jpg" alt="collabo">
+          <div class="none_hover-text"> 
+            <img src="./images/main_img/logo.png" alt="logo">
+            X YKJEONG
+          </div>
+        </div>
+        <div class="collabo__text">
+          <p class="collabo__main__text">
+            YK JEONG<br>
+            X<br>
+            GENTLEMONSTER
+          </p>
+          <p class="collabo__sub__text">
+            글로벌 패션 아이웨어 브랜드 젠틀몬스터가<br>
+            스타일리스트 정윤기와 함께<br>
+            아이웨어 컬렉션을 런칭합니다.<br><br>
+
+            선글라스 1종과 안경 2종으로 구성된<br>
+            이번 협업 컬렉션은 아세테이트와 메탈이라는<br>
+            상반된 소재 간의 조화를 통해 고급스러운 디자인으로 완성되었습니다.
+          </p>
+          <p class="collabo__bottom__text">
+            HAUS DOSAN 22.07.05 ~ 22.08.08
+          </p>
+        </div>
+      </div>
+
+      <div class="collabo-wrap collabo-03">
+        <div class="collabo__img">
+          <img src="./images/main_img/collabo_03.jpg" alt="collabo">
+          <div class="none_hover-text">
+            <img src="./images/main_img/logo.png" alt="logo">
+            X MONCLER
+          </div>
+        </div>
+        <div class="collabo__text">
+          <p class="collabo__main__text">
+            MONCLER<br>
+            X<br>
+            GENTLEMONSTER
+          </p>
+          <p class="collabo__sub__text">
+            몽클레르 지니어스 컬렉션을 기념해</br>
+            하우스 도산에서 특별 팝업 공간을 한 달간 선보입니다.<br><br>
+            현실과 디지털 세계 사이의 모호함 속에서<br>
+            ‘스와이프’ 모션을 통해 느껴지는 감정들을<br>
+            몽클레르와 젠틀몬스터의 감각으로<br>
+            풀어낸 설치물과 컬렉션 제품에 담았습니다.
+          </p>
+          <p class="collabo__bottom__text">
+            2022.05.05 ~ 22.05.30 11:00am–09:00pm
+          </p>
+        </div>
+      </div>
+
+      <div class="collabo-wrap collabo-04">
+        <div class="collabo__img">
+          <img src="./images/main_img/collabo_04.jpg" alt="collabo">
+          <div class="none_hover-text">
+            <img src="./images/main_img/logo.png" alt="logo">
+            X JENNY
+          </div>
+        </div>
+        <div class="collabo__text">
+          <p class="collabo__main__text">
+            JENNY<br>
+            X<br>
+            GENTLEMONSTER
+          </p>
+          <p class="collabo__sub__text">
+            전세계 5개 도시에서만 만나볼 수 있는 <br>
+            ’젠틀가든’은 상상 속에만 있던<br>
+            환상적인 마을의 풍경을 그대로 재현합니다.<br><br>
+            젠틀 가든 팝업이 운영되는 글로벌 5개 도시에서는<br>
+            제니가 직접 구상한 FRUITS OF PARADISE 패키지가 한정 수량으로 판매됩니다.
+          </p>
+          <p class="collabo__bottom__text">
+            HAUS DOSAN 2022.03.18 ~22.04.29 11:00am–09:00pm
+          </p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="youtube">
+    <p class="youtube__title">GENTLE MOSTER YOUTUBE</p>
+    <div class="youtube__contents">
+      <div class="video-area">
+        <iframe width="100%" height="560" src="https://www.youtube.com/embed/BO3e3wb2Nhk" title="[MONCLER + GENTLE MONSTER] SWIPE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="youtube__text-area">
+        <p class="youtube__text__title">[MONCLER + GENTLE MONSTER]</p>
+        <p class="kor">
+          전세계 다섯 개 도시에서 펼쳐진 몽클레르 지니어스 쇼 중,<br>
+          유일하게 서울에서 진행된
+          몽클레르 지니어스-젠틀몬스터 쇼를 공개합니다.
+        </p>
+        <p class="eng">
+          Among Moncler Genius shows held in five cities around the world,<br>
+          the Moncler Genius-Gentle Monster
+          show in Seoul is the only one to be unveiled.
+        </p>
+        <a href="https://www.youtube.com/c/gentlemonsterofficial" class="youtube__more">
+          더 많은 영상 Youtube에서<span class="material-icons">arrow_forward_ios</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sns">
+    <div class="img__box">
+      <img src="./images/main_img/sns_01.jpg" alt="sns">
+
+    </div>
+    <div class="img__box">
+      <img src="./images/main_img/sns_02.jpg" alt="sns">
+
+    </div>
+    <div class="img__box">
+      <img src="./images/main_img/sns_03.jpg" alt="sns">
+
+    </div>
+    <div class="img__box">
+      <img src="./images/main_img/sns_04.jpg" alt="sns">
+
+    </div>
+    <div class="img__box text__box">
+      GENTLE<br>MONSTER
+    </div>
+    <div class="img__box">
+      <img src="./images/main_img/sns_05.jpg" alt="sns">
+
+    </div>
+    <div class="img__box">
+      <img src="./images/main_img/sns_06.jpg" alt="sns">
+  
+    </div>
+    <div class="img__box">
+      <img src="./images/main_img/sns_07.jpg" alt="sns">
+
+    </div>
+    <div class="img__box">
+      <img src="./images/main_img/sns_08.jpg" alt="sns">
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="inner">
+      <div class="footer__top">
+        <div class="footer__logo">
+          <div class="footer__title">
+            <img src="./images/main_img/logo.png" alt="logo">
+            <p>GENTLE MONSTER</p>
+          </div>
+          <div class="footer__search">
+            <input type="text" placeholder="검색어를 입력해주세요">
+            <span class="material-icons">search</span>
+          </div>
+        </div>
+        <div class="customer">
+          <ul>
+            <li><a class="li__title" href="#!">채용안내</a></li>
+            <li><a href="#!">채용소개</a></li>
+            <li><a href="#!">채용지원</a></li>
+          </ul>
+          <ul>
+            <li><a class="li__title" href="#!">고객서비스</a></li>
+            <li><a href="#!">문의</a></li>
+            <li><a href="#!">배송</a></li>
+            <li><a href="#!">교환 및 환불</a></li>
+            <li><a href="#!">주문조회</a></li>
+            <li><a href="#!">수리서비스 가이드</a></li>
+            <li><a href="#!">제품등록 가이드</a></li>
+            <li><a href="#!">제품등록</a></li>
+          </ul>
+          <ul>
+            <li><a class="li__title" href="#!">법적고지</a></li>
+            <li><a href="#!">이용약관</a></li>
+            <li><a href="#!">개인정보처리방침</a></li>
+            <li><a href="#!">쿠키 정책</a></li>
+            <li><a href="#!">기프트카드 이용약관</a></li>
+          </ul>
+          <ul>
+            <li><a class="li__title" href="#!">소셜미디어</a></li>
+            <li><a href="#!">페이스북</a></li>
+            <li><a href="#!">인스타그램</a></li>
+            <li><a href="#!">유튜브</a></li>
+            <li><a href="#!">트위터</a></li>
+            <li><a href="#!">카카오톡</a></li>
+            <li><a href="#!">핀터레스트</a></li>
+            <li><a href="#!">위쳇</a></li>
+            <li><a href="#!">웨이브</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="inner">
+        <div class="copyright">
+          © GENTLE MONSTER
+        </div>
+        <div class="address">
+          <p>주) 아이아이컴바인드 | 대표자명: 김한국 | 사업자번호: 119-86-38589 | 통신판매신고번호: 제 2014-서울마포-1050 호 (사업자 정보 확인) | 이메일 문의: cs@gentlemonster.com</p>
+          <p>개인정보보호책임자: 정태호 | 주소: 서울특별시 마포구 어울마당로5길 41 | 대표번호: 1600-2126</p>
+          <p>고객님의 안전한 현금자산 거래를 위하여 하나은행과 채무지급보증계약을 체결하여 보장해드리고 있습니다. 서비스 가입사실 확인</p>
+        </div>
+        <div class="mine">
+          <p>※본 사이트는 개인의 포트폴리오 사이트로 제작되어 상업적 목적이 아닙니다</p>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+</body>
+
+</html>

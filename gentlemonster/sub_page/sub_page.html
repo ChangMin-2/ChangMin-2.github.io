@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- gsap cdn - 애니메이션 플러그인 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js" integrity="sha512-lZACdYsy0W98dOcn+QRNHDxFuhm62lfs8qK5+wPp7X358CN3f+ml49HpnwzTiXFzETs4++fADePDI+L2zwlm7Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- google icons -->
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <!-- xeicon -->
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/sub.css">
+    <!-- js -->
+    <script defer src="./js/sub.js"></script>
+    <script defer src="../js/modal.js"></script>
+    <title>GENTLE MONSTER SUB page</title>
+  </head>
+<body>
+  <!-- Header&search&cart&fixed-btn  -->
+  <header class="header">
+    <div class="header__inner">
+      <a class="logo" href="../index.html">GENTLE MONSTER</a>
+      <ul class="lnb">
+        <li>
+          <a href="#!">선글라스</a>
+          <div class="sub-menu">
+            <ul>
+            <li><a href="./sub_page.html">전체보기</a></li>
+            <li><a href="javasrcipt:void(0)">신상 컬렉션</a></li>
+            <li><a href="javasrcipt:void(0)">베스트</a></li>
+            <li><a href="javasrcipt:void(0)">선물추천</a></li>
+            <li><a href="javasrcipt:void(0)">클래식</a></li>
+            <li><a href="javasrcipt:void(0)">틴트렌즈</a></li>
+            <li><a href="javasrcipt:void(0)">사각 프레임</a></li>
+            <li><a href="javasrcipt:void(0)">켓아이 프레임</a></li>
+            <li><a href="javasrcipt:void(0)">원형 프레임</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#!">안경</a>
+          <div class="sub-menu">
+            <ul>
+              <li><a href="javasrcipt:void(0)">전체보기</a></li>
+              <li><a href="javasrcipt:void(0)">베스트</a></li>
+              <li><a href="javasrcipt:void(0)">선물추천</a></li>
+              <li><a href="javasrcipt:void(0)">블루라이트 차단</a></li>
+              <li><a href="javasrcipt:void(0)">클래식</a></li>
+              <li><a href="javasrcipt:void(0)">틴트 렌즈</a></li>
+              <li><a href="javasrcipt:void(0)">사각 프레임</a></li>
+              <li><a href="javasrcipt:void(0)">원형 프레임</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#!">스타일</a>
+          <div class="sub-menu">
+            <ul>
+              <li><a href="javasrcipt:void(0)">ALL</a></li>
+              <li><a href="javasrcipt:void(0)">Women</a></li>
+              <li><a href="javasrcipt:void(0)">Men</a></li>   
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#!">선물추천</a>
+          <div class="sub-menu">
+            <ul>
+              <li><a href="javasrcipt:void(0)">GIFT CARD</a></li>
+              <li><a href="javasrcipt:void(0)">For Women</a></li>
+              <li><a href="javasrcipt:void(0)">For Men</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#!">서비스</a>
+          <div class="sub-menu">
+            <ul>
+              <li><a href="javasrcipt:void(0)">매장 보기</a></li>
+              <li><a href="javasrcipt:void(0)">수리 서비스</a></li>
+              <li><a href="javasrcipt:void(0)">문의</a></li>     
+            </ul>
+          </div>
+        </li>
+        <li><a href="#!">콜라보레이션</a></li>
+        <li><a href="#!">브랜드이슈</a></li>
+      </ul>
+      <ul class="gnb">
+        <li><a href="#!"><span class="material-icons language-icons">language</span>Shop in KR</a></li>
+        <li><a href="#!">Sign In</a></li>
+        <li><a href="#!">Sign Up</a></li>
+        <li><a href="#!">My</a></li>
+        <li>
+          <a href="#!">
+          <span class="material-icons search-icons">search</span>
+          <span class="material-icons search-close-icons">close</span>
+          </a>
+        </li>
+        <li>
+          <a href="#!">
+            <span class="material-icons shopping_cart-icons">shopping_cart</span>
+            <span class="material-icons cart-close-icons">vertical_align_top</span>
+          </a>
+          </li>
+      </ul>
+    </div>
+  </header>
+  
+  <div class="cart">
+    <div class="cart__contents">
+      <div class="cart__title">쇼핑백</div>
+      <ul class="cart__sec">
+        <li class="cart-none">현재 장바구니가 비어있습니다.</li>
+      </ul>
+    </div>
+    <div class="cart__price">
+      <div><p>배송비</p><p>무료</p></div>
+      <div><p>합계</p><p>0원</p></div>
+      <button>결제하기</button>
+      <button class="grayBtn">자세히보기</button>
+    </div>
+  </div>
+  
+  <div class="search">
+    <div class="inner">
+      <div class="search__title">고객님, 무엇을 찾으시나요?</div>
+      <div class="input">
+        <input type="text" placeholder="상품을 찾아보세요" autofocus>
+        <span class="material-icons">search</span>
+      </div>
+
+      <div class="search__contents">
+        <ul>
+          <li class="search__contents__title">인기검색어</li>
+          <li><a href="#!">허 01</a></li>
+          <li><a href="#!">토미 01</a></li>
+          <li><a href="#!">토미 01(BR)</a></li>
+          <li><a href="#!">드리머 17 01</a></li>
+          <li><a href="#!">알리오 C1</a></li>
+          <li><a href="#!">아가일 01</a></li>
+        </ul>
+        <div class="more_search">
+          <p class="search__contents__title">다양한 컬렉션을 만나보세요.</p>
+          <div>
+            <div class="search__contents_rank">
+              <a href="#!">
+                <img src="../images/main_img/glass_01.jpg" alt="glass">
+                <p>안경</p>
+              </a>
+              <a href="#!">
+                <img src="../images/main_img/sun_01.jpg" alt="sun">
+                <p>선글라스</p>
+              </a>
+              <a href="#!">
+                <img src="../images/main_img/glass_02.jpg" alt="glass">
+                <p>베스트</p>
+              </a>
+              <a href="#!">
+                <img src="../images/main_img/sun_02.jpg" alt="sun">
+                <p>베스트</p>
+              </a>
+              <a href="#!">
+                <img src="./images/sub_img/product_11_02.jpg" alt="new">
+                <p>2022 컬렉션</p>
+              </a>
+              <a href="#!">
+                <img src="./images/sub_img/product_07_01.jpg" alt="sq">
+                <p>사각프레임</p>
+              </a>
+              <a href="#!">
+                <img src="./images/sub_img/product_10_04.jpg" alt="cat">
+                <p>켓아이프레임</p>
+              </a>
+              <a href="#!">
+                <img src="./images/sub_img/product_44_01.jpg" alt="eq">
+                <p>원형프레임</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="fixed-btn">
+    <ul>
+      <li class="to-top"><span class="material-icons">vertical_align_top</span></li>
+      <li>
+        <span class="material-icons">favorite_border</span>
+        <div class="count-heart">0</div>
+      </li>
+    </ul>
+  </div>
+  <!-- Header&search&cart&fixed-btn  -->
+
+  <section class="tab__btn">
+    <div class="inner">
+      <div class="tab">
+        <img src="./images/sub_img/product_01_01.jpg" alt="total">
+        <p>전체보기</p>
+      </div>
+      <div class="tab">
+        <img src="./images/sub_img/product_10_04.jpg" alt="total">
+        <p>켓아이 프레임</p>
+      </div>
+      <div class="tab">
+        <img src="./images/sub_img/product_11_02.jpg" alt="total">
+        <p>틴트렌즈</p>
+      </div>
+      <div class="tab">
+        <img src="./images/sub_img/product_44_01.jpg" alt="total">
+        <p>원형 프레임</p>
+      </div>
+      <div class="tab">
+        <img src="./images/sub_img/product_07_01.jpg" alt="total">
+        <p>사각 프레임</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="product-sec">
+    <div class="classification">
+      <div class="classification__container">
+        <div>
+          <p>프레임컬러</p>
+          <div class="input__container">
+            <div><input type="checkbox" id="chk1-01"><label for="chk1-01">화이트</label></div>
+            <div><input type="checkbox" id="chk1-02"><label for="chk1-02">블랙</label></div>
+            <div><input type="checkbox" id="chk1-03"><label for="chk1-03">핑크</label></div>
+            <div><input type="checkbox" id="chk1-04"><label for="chk1-04">그레이</label></div>
+            <div><input type="checkbox" id="chk1-05"><label for="chk1-05">레드</label></div>
+            <div><input type="checkbox" id="chk1-06"><label for="chk1-06">브라운</label></div>
+            <div><input type="checkbox" id="chk1-07"><label for="chk1-07">클리어</label></div>
+            <div><input type="checkbox" id="chk1-08"><label for="chk1-08">그린</label></div>
+            <div><input type="checkbox" id="chk1-09"><label for="chk1-09">골드</label></div>
+            <div><input type="checkbox" id="chk1-10"><label for="chk1-10">블루</label></div>
+            <div><input type="checkbox" id="chk1-11"><label for="chk1-11">실버</label></div>
+            <div><input type="checkbox" id="chk1-12"><label for="chk1-12">옐로우</label></div>
+            <div><input type="checkbox" id="chk1-13"><label for="chk1-13">기타</label></div>
+          </div>
+        </div>
+
+        <div>
+          <p>렌즈컬러</p>
+          <div class="input__container">
+            <div><input type="checkbox" id="chk2-01"><label for="chk2-01">블랙</label></div>
+            <div><input type="checkbox" id="chk2-02"><label for="chk2-02">핑크</label></div>
+            <div><input type="checkbox" id="chk2-03"><label for="chk2-03">그레이</label></div>
+            <div><input type="checkbox" id="chk2-04"><label for="chk2-04">레드</label></div>
+            <div><input type="checkbox" id="chk2-05"><label for="chk2-05">브라운</label></div>
+            <div><input type="checkbox" id="chk2-06"><label for="chk2-06">베이지</label></div>
+            <div><input type="checkbox" id="chk2-07"><label for="chk2-07">그린</label></div>
+            <div><input type="checkbox" id="chk2-08"><label for="chk2-08">클리어</label></div>
+            <div><input type="checkbox" id="chk2-09"><label for="chk2-09">블루</label></div>
+            <div><input type="checkbox" id="chk2-10"><label for="chk2-10">실버</label></div>
+            <div><input type="checkbox" id="chk2-11"><label for="chk2-11">옐로우</label></div>
+            <div><input type="checkbox" id="chk2-12"><label for="chk2-12">변색</label></div>
+            <div><input type="checkbox" id="chk2-13"><label for="chk2-13">기타</label></div>
+          </div>
+        </div>
+
+        <div>
+          <p>소재</p>
+          <div class="input__container">
+            <div><input type="checkbox" id="chk3-01"><label for="chk3-01">아세테이트</label></div>
+            <div><input type="checkbox" id="chk3-02"><label for="chk3-02">메탈</label></div>
+            <div><input type="checkbox" id="chk3-03"><label for="chk3-03">콤비</label></div>
+          </div>
+        </div>
+
+        <div>
+          <p>젠더</p>
+          <div class="input__container">
+            <div><input type="checkbox" id="chk4-01"><label for="chk4-01">남성</label></div>
+            <div><input type="checkbox" id="chk4-02"><label for="chk4-02">여성</label></div>
+          </div>
+        </div>
+
+        <div>
+          <p>정렬</p>
+          <div class="input__container">
+            <div><input type="checkbox" id="chk5-01"><label for="chk5-01">신상품순</label></div>
+            <div><input type="checkbox" id="chk5-02"><label for="chk5-02">낮은가격순</label></div>
+            <div><input type="checkbox" id="chk5-02"><label for="chk5-02">높은가격순</label></div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-area">    
+        <button>초기화</button>
+        <button>상품보기</button>
+      </div>
+    </div>
+
+
+    <div class="inner">
+      <div class="product__classification">
+        <div class="product__classification__left">
+          <p>선글라스</p>
+          <p class="totalView">전체보기</p>
+          <p class="catView">켓아이프레임</p>
+          <p class="tintView">틴트렌즈</p>
+          <p class="circleView">원형프레임</p>
+          <p class="squareView">사각프레임</p>
+        </div>
+        <div class="product__classification__right">
+          <p class="view-mode01">간략보기<span class="material-icons-outlined">view_compact</span></p>
+          <p class="view-mode02">기본보기<span class="material-icons-outlined">view_module</span></p>
+          <p class="filter">필터<span class="material-icons">tune</span></p>
+        </div>
+      </div>
+
+      <div class="product__container">
+        <div class="product tint circle">
+          <a href="../detail_page/detail_page.html"><img src="./images/sub_img/product_01_01.jpg" alt="product"></a>
+          <div class="product__text">
+            <div class="product__title">
+              <p>랭</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined shopping_cart-icon">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">259,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 black"></div>
+              <div class="color color-02 orange" ></div>
+              <div class="color color-03 green"></div>
+              <div class="color color-04 none"></div>
+              <div class="color color-05 none"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product tint circle">
+          <a href="../detail_page/detail_page.html"><img src="./images/sub_img/product_02_01.jpg" alt="product"></a>
+          <div class="product__text">
+            <div class="product__title">
+              <p>론디</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined shopping_cart-icon">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">259,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 black"></div>
+              <div class="color color-02 yellow" ></div>
+              <div class="color color-03 pink"></div>
+              <div class="color color-04 blue"></div>
+              <div class="color color-05 brown"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product tint">
+          <img src="./images/sub_img/product_03_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>밀</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined shopping_cart-icon">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">249,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 yellow"></div>
+              <div class="color color-02 green" ></div>
+              <div class="color color-03 black"></div>
+              <div class="color color-04 gold"></div>
+              <div class="color color-05 none"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product tint square">
+          <img src="./images/sub_img/product_04_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>릴리트</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined shopping_cart-icon">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">259,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 gray"></div>
+              <div class="color color-02 green" ></div>
+              <div class="color color-03 yellow"></div>
+              <div class="color color-04 black"></div>
+              <div class="color color-05 gold"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product tint">
+          <img src="./images/sub_img/product_05_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>로셀</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">259,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 black"></div>
+              <div class="color color-02 orange" ></div>
+              <div class="color color-03 gray"></div>
+              <div class="color color-04 brown"></div>
+              <div class="color color-05 none"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product tint">
+          <img src="./images/sub_img/product_06_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>로지</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">269,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 brown"></div>
+              <div class="color color-02 yellow" ></div>
+              <div class="color color-03 black"></div>
+              <div class="color color-04 orange"></div>
+              <div class="color color-05 none"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product tint square">
+          <img src="./images/sub_img/product_07_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>프리다</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">269,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 orange"></div>
+              <div class="color color-02 brown" ></div>
+              <div class="color color-03 gray"></div>
+              <div class="color color-04 black"></div>
+              <div class="color color-05 black"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product tint circle">
+          <img src="./images/sub_img/product_08_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>토미</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">249,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 gray"></div>
+              <div class="color color-02 orange" ></div>
+              <div class="color color-03 black"></div>
+              <div class="color color-04 none"></div>
+              <div class="color color-05 none"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product tint square cat">
+          <img src="./images/sub_img/product_09_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>탐부</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">320,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 black"></div>
+              <div class="color color-02 purple" ></div>
+              <div class="color color-03 white"></div>
+              <div class="color color-04 ivory"></div>
+              <div class="color color-05 none"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product tint cat">
+          <img src="./images/sub_img/product_10_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>로티</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">280,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 white"></div>
+              <div class="color color-02 purple" ></div>
+              <div class="color color-03 yellow"></div>
+              <div class="color color-04 black"></div>
+              <div class="color color-05 none"></div>
+            </div>
+          </div>
+        </div>
+        <div class="product tint">
+          <img src="./images/sub_img/product_11_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>모마티</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">249,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 blue"></div>
+              <div class="color color-02 orange" ></div>
+              <div class="color color-03 black"></div>
+              <div class="color color-04 brown"></div>
+              <div class="color color-05 gold"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product tint">
+          <img src="./images/sub_img/product_12_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>버티</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">320,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 black"></div>
+              <div class="color color-02 black" ></div>
+              <div class="color color-03 blue"></div>
+              <div class="color color-04 gray"></div>
+              <div class="color color-05 none"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product tint square cat">
+          <img src="./images/sub_img/product_13_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>디디온</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">270,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 ivory"></div>
+              <div class="color color-02 black" ></div>
+              <div class="color color-03 black"></div>
+              <div class="color color-04 brown"></div>
+              <div class="color color-05 purple"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product tint">
+          <img src="./images/sub_img/product_14_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>라우디</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">270,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 brown"></div>
+              <div class="color color-02 black" ></div>
+              <div class="color color-03 blue"></div>
+              <div class="color color-04 purple"></div>
+              <div class="color color-05 none"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product tint">
+          <img src="./images/sub_img/product_15_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>가비</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">269,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 white"></div>
+              <div class="color color-02 black" ></div>
+              <div class="color color-03 gray"></div>
+              <div class="color color-04 none"></div>
+              <div class="color color-05 none"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product square">
+          <img src="./images/sub_img/product_16_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>드리머</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">249,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 black"></div>
+              <div class="color color-02 none" ></div>
+              <div class="color color-03 none"></div>
+              <div class="color color-04 none"></div>
+              <div class="color color-05 none"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product square">
+          <img src="./images/sub_img/product_17_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>데우스</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">320,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 red"></div>
+              <div class="color color-02 brown" ></div>
+              <div class="color color-03 black"></div>
+              <div class="color color-04 none"></div>
+              <div class="color color-05 none"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product square">
+          <img src="./images/sub_img/product_18_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>로지</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">269,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 black"></div>
+              <div class="color color-02 orange" ></div>
+              <div class="color color-03 brown"></div>
+              <div class="color color-04 gold"></div>
+              <div class="color color-05 none"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product square">
+          <img src="./images/sub_img/product_19_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>릭</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">259,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 brown"></div>
+              <div class="color color-02 black" ></div>
+              <div class="color color-03 brown"></div>
+              <div class="color color-04 none"></div>
+              <div class="color color-05 none"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product square circle">
+          <img src="./images/sub_img/product_20_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>마이 마</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">249,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 gray"></div>
+              <div class="color color-02 black" ></div>
+              <div class="color color-03 brown"></div>
+              <div class="color color-04 none"></div>
+              <div class="color color-05 none"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product square">
+          <img src="./images/sub_img/product_21_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>드리머호프</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">215,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 brown"></div>
+              <div class="color color-02 gray" ></div>
+              <div class="color color-03 black"></div>
+              <div class="color color-04 none"></div>
+              <div class="color color-05 none"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product square">
+          <img src="./images/sub_img/product_22_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>리베</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">259,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 black"></div>
+              <div class="color color-02 gray" ></div>
+              <div class="color color-03 green"></div>
+              <div class="color color-04 orange"></div>
+              <div class="color color-05 none"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product square cat">
+          <img src="./images/sub_img/product_23_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>솔베이</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">280,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 red"></div>
+              <div class="color color-02 gold" ></div>
+              <div class="color color-03 brown"></div>
+              <div class="color color-04 none"></div>
+              <div class="color color-05 none"></div>
+            </div>        
+          </div>
+        </div>
+        <div class="product square">
+          <img src="./images/sub_img/product_24_01.jpg" alt="product">
+          <div class="product__text">
+            <div class="product__title">
+              <p>로셀</p>
+              <div class="product__btn">
+                <span class="material-icons-outlined">shopping_cart</span>
+                <span class="material-icons-outlined favorite_border-icon">favorite_border</span>
+                <span class="material-icons-outlined favorite-icon">favorite</span>
+              </div>
+            </div>
+            <div class="product__price">269,000원</div>
+            <div class="color__container">
+              <div class="color__text">color+</div>
+              <div class="color color-01 gray"></div>
+              <div class="color color-02 orange" ></div>
+              <div class="color color-03 black"></div>
+              <div class="color color-04 gold"></div>
+              <div class="color color-05 none"></div>
+            </div>        
+          </div>
+        </div>
+        
+
+
+
+      </div> <!--product__container-->
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="inner">
+      <div class="footer__top">
+        <div class="footer__logo">
+          <div class="footer__title">
+            <img src="../images/main_img/logo.png" alt="logo">
+            <p>GENTLE MONSTER</p>
+          </div>
+          <div class="footer__search">
+            <input type="text" placeholder="검색어를 입력해주세요">
+            <span class="material-icons">search</span>
+          </div>
+        </div>
+        <div class="customer">
+          <ul>
+            <li><a class="li__title" href="#!">채용안내</a></li>
+            <li><a href="#!">채용소개</a></li>
+            <li><a href="#!">채용지원</a></li>
+          </ul>
+          <ul>
+            <li><a class="li__title" href="#!">고객서비스</a></li>
+            <li><a href="#!">문의</a></li>
+            <li><a href="#!">배송</a></li>
+            <li><a href="#!">교환 및 환불</a></li>
+            <li><a href="#!">주문조회</a></li>
+            <li><a href="#!">수리서비스 가이드</a></li>
+            <li><a href="#!">제품등록 가이드</a></li>
+            <li><a href="#!">제품등록</a></li>
+          </ul>
+          <ul>
+            <li><a class="li__title" href="#!">법적고지</a></li>
+            <li><a href="#!">이용약관</a></li>
+            <li><a href="#!">개인정보처리방침</a></li>
+            <li><a href="#!">쿠키 정책</a></li>
+            <li><a href="#!">기프트카드 이용약관</a></li>
+          </ul>
+          <ul>
+            <li><a class="li__title" href="#!">소셜미디어</a></li>
+            <li><a href="#!">페이스북</a></li>
+            <li><a href="#!">인스타그램</a></li>
+            <li><a href="#!">유튜브</a></li>
+            <li><a href="#!">트위터</a></li>
+            <li><a href="#!">카카오톡</a></li>
+            <li><a href="#!">핀터레스트</a></li>
+            <li><a href="#!">위쳇</a></li>
+            <li><a href="#!">웨이브</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="inner">
+        <div class="copyright">
+          © GENTLE MONSTER
+        </div>
+        <div class="address">
+          <p>주) 아이아이컴바인드 | 대표자명: 김한국 | 사업자번호: 119-86-38589 | 통신판매신고번호: 제 2014-서울마포-1050 호 (사업자 정보 확인) | 이메일 문의: cs@gentlemonster.com</p>
+          <p>개인정보보호책임자: 정태호 | 주소: 서울특별시 마포구 어울마당로5길 41 | 대표번호: 1600-2126</p>
+          <p>고객님의 안전한 현금자산 거래를 위하여 하나은행과 채무지급보증계약을 체결하여 보장해드리고 있습니다. 서비스 가입사실 확인</p>
+        </div>
+        <div class="mine">
+          <p>※본 사이트는 개인의 포트폴리오 사이트로 제작되어 상업적 목적이 아닙니다</p>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+</html>
